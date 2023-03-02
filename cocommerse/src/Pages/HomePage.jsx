@@ -18,7 +18,7 @@ const HomePage = () => {
 			.get(`https://unit-5backend.onrender.com/LandingMen?_limit=${limit}`)
 			.then((res) => {
 				setData(res.data);
-				console.log(res.data);
+
 			});
 	};
 	const handleLimit=()=>{

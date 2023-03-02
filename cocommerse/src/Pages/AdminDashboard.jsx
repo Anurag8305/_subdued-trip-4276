@@ -12,8 +12,7 @@ import {
   import React from "react";
   import { useDispatch, useSelector } from "react-redux";
  
-  //import Sorting from "../Components/Sorting";
- // import "../CSS/admin.css";
+
   import { getData } from "../Redux/Sorting/action";
   import { useState, useEffect } from "react";
 
@@ -34,7 +33,7 @@ import ProductManagement from "../Components/ProductManagement";
 
     const handleSort = (e) => {
       e.preventDefault();
-      console.log(e.target.value);
+
       if (e.target.value == "High") {
         data.sort((a, b) => {
          
@@ -46,9 +45,9 @@ import ProductManagement from "../Components/ProductManagement";
           return a.price - b.price;
         });
       }
-      // console.log(Data)
+
       setflag(!flag);
-      // console.log(data)
+
       setData(data);
     };
   
@@ -60,7 +59,7 @@ import ProductManagement from "../Components/ProductManagement";
         await 
         navigate("/");
       } catch (error) {
-        console.log(error.message);
+
       }
     };
     

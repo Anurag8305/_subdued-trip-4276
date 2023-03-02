@@ -52,7 +52,6 @@ const Mens = () => {
   const [Category, setCategory] = useState("1");
   const [noofElements, setnoofElements] = useState(6);
   const loaction = useLocation();
-  console.log(loaction);
   const [searchParams, setSearchParams] = useSearchParams();
   const initialSort = searchParams.getAll("sort");
   const [sort, setSort] = useState(initialSort[0] || "");
@@ -77,9 +76,9 @@ const Mens = () => {
           _order: sortBy,
         },
       };
-      console.log("random");
+
       dispatch(getData(getMensParams));
-      console.log("random2");
+
     }
   }, [loaction.search, sort, setSearchParams]);
 

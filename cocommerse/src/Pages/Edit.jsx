@@ -13,7 +13,7 @@ const Edit = () => {
   });
   const { id } = useParams();
   const data = products.filter((i) => i.id === +id);
-  //console.log(id, data, products);
+
   const [product, setProduct] = useState({
     id: data[0].id,
     
@@ -77,40 +77,7 @@ const Edit = () => {
             />
           </div>
 
-          {/* <div>
-            <Select
-              name="option"
-              value={product.option}
-              onChange={(event) =>
-                setProduct({ ...product, option: event.target.value })
-              }
-            >
-              <option value="">Select option</option>
-              <option value="Chicken">Chicken</option>
-              <option value="Biryani">Biryani</option>
-              <option value="exclusivedeal">exclusivedeal</option>
-              <option value="newlaunch">newlaunch</option>
-              <option value="boxmeal">boxmeal</option>
-              <option value="burger">burger</option>
-              <option value="snacks">snacks</option>
-              <option value="stayhomespecial">stayhomespecial</option>
-              <option value="beverages">beverages</option>
-            </Select>
-          </div> */}
-
-          {/* <div>
-            <Select
-              name="category"
-              value={product.category}
-              onChange={(event) =>
-                setProduct({ ...product, category: event.target.value })
-              }
-            >
-              <option value="">Select Category</option>
-              <option value="veg">veg</option>
-              <option value="non-veg">non-veg</option>
-            </Select>
-          </div> */}
+         
 
           <div>
             <Input

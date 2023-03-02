@@ -33,7 +33,7 @@ const deleteDataFromCart = (queryParams) => (dispatch) => {
 
 const update = (queryParams) => (dispatch) => {
   return axios.patch(`https://unit-5backend.onrender.com/Mens/${queryParams}`).then((r) => {
-    console.log(r.data);
+
   });
 };
 

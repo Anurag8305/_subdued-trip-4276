@@ -2,7 +2,7 @@ import { Box, Input, Select, Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import styles from "../CSS/ProductMgtStyles.css";
 import { useDispatch } from "react-redux";
-import { addNewData } from "../Redux/ProjectMgt/action";
+import { addNewData } from "../Redux/ProductMgt/action";
 import { getData } from "../Redux/Sorting/action";
 
 function ProductManagement() {

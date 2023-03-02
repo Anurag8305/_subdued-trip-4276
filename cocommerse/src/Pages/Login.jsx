@@ -47,7 +47,6 @@ const Login = () => {
   };
   const Login = () => {
     try {
-      console.log("login called");
       let users = axios
         .get("https://unit-5backend.onrender.com/Users")
         .then((response) => {
@@ -57,7 +56,6 @@ const Login = () => {
               item.password === formData.password
             );
           });
-          console.log("login in user", login, response.data);
           if (
             formData.email === "admin@admin.com" &&
             formData.password === "123456"
@@ -74,7 +72,6 @@ const Login = () => {
             });
             navigateTo("/homepage");
           } else {
-            console.log("login creds invalid");
             toast({
               title: "Credential Invalid.",
               description: "",

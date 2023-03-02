@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, SimpleGrid, Image, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { deleteDataFromCart, edit, getdata } from "../Redux/ProjectMgt/action";
+import { deleteDataFromCart, edit } from "../Redux/ProductMgt/action";
 import { useDispatch } from "react-redux";
 import { getData } from "../Redux/Sorting/action";
 
@@ -11,7 +11,6 @@ function DisplayProducts({ data }) {
   const status = (id) => {
     setActive((pre) => !pre);
     let payload = active;
-    // console.log(payload, id);
     dispatch(edit(id, { available: payload })).then(() => dispatch(getData()));
   };
   

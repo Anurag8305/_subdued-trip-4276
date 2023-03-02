@@ -20,7 +20,6 @@ import {
     return axios
       .get("https://unit-5backend.onrender.com/Mens", params)
       .then((res) => {
-        console.log(res.data);
         dispatch(getMensSuc(res.data));
       })
       .catch((err) => {
